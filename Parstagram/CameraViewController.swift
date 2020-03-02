@@ -10,14 +10,14 @@ import UIKit
 import AlamofireImage
 import Parse
 
-class CameraViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
+class CameraViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate,UITextFieldDelegate {
 
     @IBOutlet weak var imageView: UIImageView!
     
     @IBOutlet weak var commentField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.commentField.delegate=self
         // Do any additional setup after loading the view.
     }
     
